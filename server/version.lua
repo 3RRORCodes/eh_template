@@ -38,7 +38,7 @@ CreateThread(function()
             local availableVersion = response.version
             local comparison = version.compare(version.parse(installedVersion), version.parse(availableVersion))
             local messages = {
-                [-1] = '^7Update available for ^5%s^7! \nDownload it from ^3<https://keymaster.fivem.net>^7.',
+                [-1] = '^7Update available for ^5%s^7! \nDownload it from ^3<https://portal.cfx.re/assets/granted-assets>^7.',
                 [0] = '^7You are using the latest version of ^5%s^7. \nVisit ^3<https://errorhub.tebex.io>^7 for more.',
                 [1] = '^3[WARNING] ^7You are on a newer version of ^5%s^7 than the current release.'
             }
