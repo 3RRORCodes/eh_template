@@ -27,7 +27,7 @@ server_scripts {
 
 files {
     "locales/en.json",
-    "web/**/**"
+    "web/**"
 }
 
 dependencies {
