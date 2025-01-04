@@ -45,7 +45,7 @@ CreateThread(function()
 
             print("^5=== === === === === === === === === === === ===^7")
             print(string.format('^5[%s] ^2Installed^7: ^1%s ^7| ^2Latest^7: ^1%s', resourceName, installedVersion, availableVersion))
-            if response.notes and comparison == -1 then
+          if response.notes then
                 print(string.format('^5[NOTES] ^3%s', response.notes))
             end
             print(string.format(messages[comparison], resourceName))
