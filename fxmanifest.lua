@@ -12,17 +12,16 @@ website "https://errorhub.co"
 shared_scripts {
     "@ox_lib/init.lua",
     "config/config.lua",
-    "shared/**.lua",
+    "shared/*.lua",
 }
 
 client_scripts {
-    "client/**.lua",
+    "client/*.lua",
 }
 
 server_scripts {
-    -- "@oxmysql/lib/MySQL.lua",
     "config/discord.lua", -- If using discord modules.
-    "server/**.lua",
+    "server/*.lua",
 }
 
 files {
@@ -30,14 +29,16 @@ files {
     "web/**"
 }
 
+ui_page 'web/index.html'
+
 dependencies {
     "eh_codekit",
     "ox_lib"
 }
 
 escrow_ignore {
-    "config/**.lua",
-    "shared/**.lua",
-    "client/**.lua",
-    "server/**.lua",
+    "config/*.lua",
+    "shared/*.lua",
+    "client/*.lua",
+    "server/*.lua",
 }
