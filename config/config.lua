@@ -8,7 +8,7 @@ ehConfig.interaction = "target" -- Which interaction system is being used ("targ
 ----------------
 lib.locale()
 
-eh = exports["eh_codekit"]:loadCodekit()
+eh = exports["eh_codekit"]:load()
 
 _debug = function(...)
     if ehConfig.debug then
