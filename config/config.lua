@@ -4,7 +4,7 @@ ehConfig.debug = {
     code = true, -- Do you want to enable debugs for code? (true/false)
     zone = true -- Do you want to enable debugs for zones i.e. zones & target? (true/false)
 }
-ehConfig.interaction = "target" -- Which interaction system is being used ("target", "interact", or "3dtext")?
+ehConfig.interaction = "target" -- Which interaction system should be used ("target", "interact", or "3dtext")?
 
 ----------------
 --- WARNING: DO NOT MODIFY ANYTHING BELOW THIS LINE
