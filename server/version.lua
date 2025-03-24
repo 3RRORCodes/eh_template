@@ -27,22 +27,14 @@ CreateThread(function()
         local versionCheckUrl = 'https://raw.githubusercontent.com/3RRORCodes/versionCheck/master/resources.json?v=' .. os.time()
 
         PerformHttpRequest(versionCheckUrl, function(err, result)
-            if err ~= 200 or not result then
+            if err ~= 200 or not result or not json.decode(result)[resourceName]?.version then
                 print("^5=== === === === === === === === === === === ===^7")
                 print("^1[ERROR] ^7Failed to check for updates.")
                 print("^5=== === === === === === === === === === === ===^7")
                 return
             end
 
-            local decoded = json.decode(result)
-            if not decoded or not decoded[resourceName] or not decoded[resourceName].version then
-                print("^5=== === === === === === === === === === === ===^7")
-                print("^1[ERROR] ^7Failed to check for updates: Invalid response format.")
-                print("^5=== === === === === === === === === === === ===^7")
-                return
-            end
-
-            local response = decoded[resourceName]
+            local response = json.decode(result)[resourceName]
             local availableVersion = response.version
             local comparison = version.compare(version.parse(installedVersion), version.parse(availableVersion))
             local messages = {
